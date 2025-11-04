@@ -554,14 +554,16 @@ ul.socials-top li {
   list-style-position: inside;
 }
 
-.bg-blueprint {
-  background-image: url("../img/blueprint.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  position: relative;
+@media (min-width: 992px) {
+  .bg-blueprint {
+    background-image: url("../img/blueprint.png");
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+  }
 }
 
 .bg-blueprint::before {
@@ -600,4 +602,11 @@ ul.socials-top li {
   font-style: normal;
   font-weight: 600;
   line-height: 32px; /* 152.381% */
+}
+
+.img-responsive {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }

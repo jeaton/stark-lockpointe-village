@@ -556,10 +556,25 @@ ul.socials-top li {
 
 @media (min-width: 992px) {
   .bg-blueprint {
+    background-image: url("../img/blueprint-v2.png");
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
     padding-top: 100px;
     padding-bottom: 100px;
     position: relative;
   }
+}
+
+.bg-blueprint::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  display: block;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 90%, transparent);
 }
 
 .quick-facts {

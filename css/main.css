@@ -848,7 +848,7 @@ object-fit: cover;
 
 /* Gallery Section */
 .gallery-section {
-  padding: 80px 0 0;
+  padding: 80px 0;
   background-color: #f9f9f9;
 }
 
@@ -862,72 +862,42 @@ object-fit: cover;
   color: #666;
 }
 
-.gallery-carousel-wrapper {
+/* Gallery Grid Layout */
+img.responsive-image {
   width: 100%;
-  height: 500px;
-  overflow: hidden;
-  position: relative;
+  height: auto;
 }
 
-#galleryCarousel {
-  width: 100%;
-  height: 100%;
-}
+@media (min-width: 991px) {
+  img.full-height {
+    height: 420px !important;
+    width: 100% !important;
+    object-fit: cover;
+  }
+  
+  span.gap {
+    height: 30px;
+    display: block;
+  }
 
-#galleryCarousel .carousel-inner {
-  width: 100%;
-  height: 100%;
-}
+  img.half-height {
+    height: 210px !important;
+    width: 100% !important;
+    object-fit: cover;
+  }
+  
+  img.half-height.negative-offset {
+    margin-top: -15px;
+  }
 
-#galleryCarousel .item {
-  width: 100%;
-  height: 100%;
-}
-
-#galleryCarousel .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-#galleryCarousel .carousel-control {
-  background: rgba(0, 0, 0, 0.3);
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 0;
-}
-
-#galleryCarousel .carousel-control.left {
-  left: 20px;
-}
-
-#galleryCarousel .carousel-control.right {
-  right: 20px;
-}
-
-#galleryCarousel .carousel-control i {
-  line-height: 50px;
-  color: #fff;
-  font-size: 20px;
+  .row.gallery-row {
+    max-height: 420px;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 767px) {
   .gallery-section {
-    padding: 50px 0 0;
-  }
-  
-  .gallery-carousel-wrapper {
-    height: 300px;
-  }
-  
-  #galleryCarousel .carousel-control.left {
-    left: 10px;
-  }
-  
-  #galleryCarousel .carousel-control.right {
-    right: 10px;
+    padding: 50px 0;
   }
 }

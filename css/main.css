@@ -189,11 +189,8 @@ body {
 .press-release {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-image: url("../img/press-release.png");
-  background-position: center center;
-  background-size: 1440px 100px;
-  background-repeat: repeat-y;
-  background-color: #3f7673;
+  background-color: var(--navy);
+  border-bottom: 1px solid var(--beige);
 }
 
 .press-release h3 {
